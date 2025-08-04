@@ -51,6 +51,13 @@ This project contains three main user roles with distinct functionalities:
 -   **Status Tracking:** View a list of their own booked appointments and their current status (Pending, Approved, Cancelled).
 
 ---
+## Screenshots
+
+| Login & Register Page | Student Dashboard | Teacher Dashboard | Admin Dashboard |
+| :---: | :---: | :---: | :---: |
+| <img width="100%" alt="Register Page" src="https://github.com/user-attachments/assets/1a54c461-835a-451f-99aa-c3d0d9493480" /> | <img width="100%" alt="Student Dashboard" src="https://github.com/user-attachments/assets/bb70a332-f5bc-4671-967b-0339d09306d3" /> | <img width="100%" alt="Teacher Dashboard" src="https://github.com/user-attachments/assets/3be6a4bb-3b68-4d95-8fcd-264e8708fce3" /> | <img width="100%" alt="Admin Dashboard" src="https://github.com/user-attachments/assets/1e4a9f0c-f623-4cb4-8d59-ef9a31697980" /> |
+
+---
 
 ## Technology Stack
 
