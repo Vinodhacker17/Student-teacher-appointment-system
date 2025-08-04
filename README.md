@@ -67,7 +67,7 @@ This project contains three main user roles with distinct functionalities:
 The system uses a client-server architecture where the frontend client communicates directly with Firebase services.
 
 -   **Client (Browser):** A static web application built with HTML, CSS, and Bootstrap. All dynamic behavior is handled by modular JavaScript.
--   **Backend (Firebase):** Google Firebase provides the backend-as-a-service. It handles user identity and stores data in Firestore collections (`students`, `teachers`, `appointments`, `availabilities`).
+-   **Backend (Firebase):** Google Firebase provides the backend-as-a-service. It handles user identity and stores data in Firestore collections.
 
 ```mermaid
 graph TD
@@ -76,7 +76,8 @@ graph TD
     D[Admin] --> B;
     B --> E[Firebase Auth];
     B --> F[Firestore Database];
-    Getting Started
+```    
+## Getting Started
 To get a local copy up and running, follow these steps.
 
 Prerequisites
@@ -168,3 +169,10 @@ Deploy:
 Bash
 
 firebase deploy
+
+
+
+
+
+
+
