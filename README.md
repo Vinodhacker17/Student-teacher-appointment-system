@@ -78,101 +78,83 @@ graph TD
     B --> F[Firestore Database];
 ```    
 ## Getting Started
-To get a local copy up and running, follow these steps.
 
-Prerequisites
-A modern web browser (e.g., Chrome, Firefox).
+To get a local copy up and running, follow these simple steps.
 
-A code editor (e.g., VS Code).
+### Prerequisites
 
-A Google account to create a Firebase project.
+-   A modern web browser (e.g., Chrome, Firefox).
+-   A code editor (e.g., VS Code).
+-   A Google account to create a Firebase project.
 
-Local Setup
-Clone the repository:
+### Local Setup
 
-Bash
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Vinodhacker17/Student-teacher-appointment-system.git
+    cd Student-teacher-appointment-system
+    ```
 
-git clone [https://github.com/Vinodhacker17/Student-teacher-appointment-system.git](https://github.com/Vinodhacker17/Student-teacher-appointment-system.git)
-cd Student-teacher-appointment-system
-Set up your Firebase Credentials:
+2.  **Set up your Firebase Credentials:**
+    -   In the Firebase Console, create a new project and then create a **Web App**.
+    -   Firebase will provide you with a `firebaseConfig` object.
+    -   In the project folder, create a new file named `firebase-config.js`.
+    -   Copy the following code into your new `firebase-config.js` file and paste your credentials into the `firebaseConfig` object.
+        ```javascript
+        // firebase-config.js
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-In the Firebase Console, create a new project and then create a Web App.
+        // IMPORTANT: Paste your own Firebase config object here
+        const firebaseConfig = {
+          apiKey: "YOUR_API_KEY",
+          authDomain: "YOUR_AUTH_DOMAIN",
+          projectId: "YOUR_PROJECT_ID",
+          storageBucket: "YOUR_STORAGE_BUCKET",
+          messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+          appId: "YOUR_APP_ID"
+        };
 
-Firebase will provide you with a firebaseConfig object.
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
 
-In the project folder, create a new file named firebase-config.js.
+        export { auth, db };
+        ```
+    *This file is listed in `.gitignore` and will not be pushed to GitHub, keeping your keys safe.*
 
-Copy the following code into your new firebase-config.js file and paste your credentials into the firebaseConfig object.
+3.  **Enable Firebase Services:**
+    -   In your Firebase project console, go to **Authentication** and enable the **Email/Password** sign-in provider.
+    -   Go to **Firestore Database** and create a database. Start in **test mode** for easy setup.
 
-JavaScript
+4.  **Run the Project:**
+    -   Use a live server extension in VS Code to open `index.html`.
 
-// firebase-config.js
-import { initializeApp } from "[https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js](https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js)";
-import { getAuth } from "[https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js](https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js)";
-import { getFirestore } from "[https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js](https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js)";
+---
 
-// IMPORTANT: Paste your own Firebase config object here
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+## Deployment
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-export { auth, db };
-This file is listed in .gitignore and will not be pushed to GitHub, keeping your keys safe.
-
-Enable Firebase Services:
-
-In your Firebase project console, go to Authentication and enable the Email/Password sign-in provider.
-
-Go to Firestore Database and create a database. Start in test mode for easy setup.
-
-Run the Project:
-
-Use a live server extension in VS Code to open index.html.
-
-Deployment
 This project can be deployed globally using Firebase Hosting.
 
-Install Firebase CLI:
+1.  **Install Firebase CLI:**
+    ```bash
+    npm install -g firebase-tools
+    ```
+2.  **Login to Firebase:**
+    ```bash
+    firebase login
+    ```
+3.  **Initialize Firebase:**
+    ```bash
+    firebase init
+    ```
+    -   Select **Hosting: Configure files for Firebase Hosting...**.
+    -   Choose your existing Firebase project.
+    -   Set your public directory to `.` (the root directory).
+    -   Configure as a single-page app: **No**.
 
-Bash
-
-npm install -g firebase-tools
-Login to Firebase:
-
-Bash
-
-firebase login
-Initialize Firebase:
-
-Bash
-
-firebase init
-Select Hosting: Configure files for Firebase Hosting....
-
-Choose your existing Firebase project.
-
-Set your public directory to . (the root directory).
-
-Configure as a single-page app: No.
-
-Deploy:
-
-Bash
-
-firebase deploy
-
-
-
-
-
-
-
+4.  **Deploy:**
+    ```bash
+    firebase deploy
+    ```
