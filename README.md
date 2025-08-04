@@ -67,7 +67,7 @@ This project contains three main user roles with distinct functionalities:
 The system uses a client-server architecture where the frontend client communicates directly with Firebase services.
 
 -   **Client (Browser):** A static web application built with HTML, CSS, and Bootstrap. All dynamic behavior is handled by modular JavaScript.
--   **Backend (Firebase):** Google Firebase provides the backend-as-a-service. It handles user identity and stores data in Firestore collections.
+-   **Backend (Firebase):** Google Firebase provides the backend-as-a-service. It handles user identity and stores data in Firestore collections (`students`, `teachers`, `appointments`, `availabilities`).
 
 ```mermaid
 graph TD
