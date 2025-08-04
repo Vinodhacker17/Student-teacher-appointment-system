@@ -13,7 +13,7 @@ A web-based platform for students to book appointments with teachers based on th
 <br>
 
 <p align="center">
-  <img src="https://i.imgur.com/your-screenshot-url.png" alt="Project Screenshot" width="80%">
+  <img width="80%" alt="Project Screenshot" src="https://github.com/user-attachments/assets/d60b558e-94ed-4aca-a45b-3c774b59b334" />
   <br>
   <em>(Important: Replace this with a real screenshot of your application's dashboard)</em>
 </p>
