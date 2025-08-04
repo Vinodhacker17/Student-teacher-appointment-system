@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Appointment System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-image-section d-none d-md-flex">
+            <div class="auth-text-overlay">
+                <h2>Appointment System</h2>
+                <p>Streamlining your schedules, one appointment at a time.</p>
+            </div>
+        </div>
+
+        <div class="auth-form-section">
+            <div class="auth-form-container">
+                <div class="text-center mb-5">
+                    <h3>Welcome Back!</h3>
+                    <p class="text-muted">Please enter your details to login.</p>
+                </div>
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
+                        <label for="loginEmail">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                        <label for="loginPassword">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                       <select class="form-select" id="roleSelect">
+                         <option selected value="">Select Role</option>
+                         <option value="student">Student</option>
+                         <option value="teacher">Teacher</option>
+                         <option value="admin">Admin</option>
+                       </select>
+                       <label for="roleSelect">I am a...</label>
+                    </div>
+                    <button type="button" onclick="loginUser()" class="btn btn-primary w-100 btn-lg py-3 mt-3">Login</button>
+                    <p class="text-center mt-4">
+                        Don't have an account? <a href="register.html">Register</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="login.js"></script>
+</body>
+</html>
