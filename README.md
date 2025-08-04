@@ -8,7 +8,7 @@
 
 A web-based platform for students to book appointments with teachers based on their availability. Built with vanilla JavaScript and powered by Google Firebase.
 
-**Live Demo:** [https://your-project-id.web.app](https://your-project-id.web.app) *(Replace with your Firebase Hosting URL)*
+**Live Demo:** [https://student-teacher-appointm-285c2.web.app](https://your-project-id.web.app) *(Replace with your Firebase Hosting URL)*
 
 <br>
 
